@@ -7,10 +7,10 @@ public class Constant {
     // Страница авторизации
     static final String valid_user_login = "vasya";
     static final String valid_user_password = "qwerty123";
-    static final SelenideElement AUTH_PAGE_TITLE = $("h2.heading ");  //  заголовок страницы
-    static final SelenideElement AUTH_LOGIN_INPUT = $("[name=login]");  //  поле ввода логина
-    static final SelenideElement AUTH_PASSWORD_INPUT = $("[name=password]");  //  поле ввода пароля
-    static final SelenideElement AUTH_CONTINUE_BUTTON = $("[data-test-id=action-login]");  //  кнопка "Продолжить"
+    static final SelenideElement auth_page_title = $("h2.heading ");  //  заголовок страницы
+    static final SelenideElement auth_login_input = $("[name=login]");  //  поле ввода логина
+    static final SelenideElement auth_password_input = $("[name=password]");  //  поле ввода пароля
+    static final SelenideElement auth_continue_button = $("[data-test-id=action-login]");  //  кнопка "Продолжить"
 
     //  Страница вериикации смс
 
@@ -30,7 +30,6 @@ public class Constant {
     static final SelenideElement card_replenishment_input_sum = $(".money-input .input__control");  //  Поле ввода суммы пополнения
     static final SelenideElement card_replenishment_from = $("[type=tel]");  //  поле ввода номера карты ОТКУДА снимается
     static final SelenideElement card_button_transfer = $("[data-test-id=\"action-transfer\"]");  //  кнопка "Пополнить"
-    static final SelenideElement card_button_cancel = $("[data-test-id=\"action-cancel\"]");  //  кнопка отмены
 
     static final String card_number_0001 = "5559 0000 0000 0001";  //  номер счета 0001
     static final String card_number_0002 = "5559 0000 0000 0002";  //  номер счета 0002

@@ -4,10 +4,10 @@ public class ValidLoginPageObject {
 
     public static SMSVerificationPageObject ValidLogin() {
         open("http://localhost:9999");
-        Constant.AUTH_PAGE_TITLE.isDisplayed();
-        Constant.AUTH_LOGIN_INPUT.setValue(Constant.valid_user_login);
-        Constant.AUTH_PASSWORD_INPUT.setValue(Constant.valid_user_password);
-        Constant.AUTH_CONTINUE_BUTTON.click();
+        Constant.auth_page_title.isDisplayed();
+        Constant.auth_login_input.setValue(Constant.valid_user_login);
+        Constant.auth_password_input.setValue(Constant.valid_user_password);
+        Constant.auth_continue_button.click();
         return new SMSVerificationPageObject();
     }
 }
