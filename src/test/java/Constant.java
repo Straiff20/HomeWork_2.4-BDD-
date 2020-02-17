@@ -5,32 +5,32 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class Constant {
     // Страница авторизации
-    static final String valid_user_login = "vasya";
-    static final String valid_user_password = "qwerty123";
-    static final SelenideElement auth_page_title = $("h2.heading ");  //  заголовок страницы
-    static final SelenideElement auth_login_input = $("[name=login]");  //  поле ввода логина
-    static final SelenideElement auth_password_input = $("[name=password]");  //  поле ввода пароля
-    static final SelenideElement auth_continue_button = $("[data-test-id=action-login]");  //  кнопка "Продолжить"
+    static final String VALID_USER_LOGIN = "vasya";
+    static final String VALID_USER_PASSWORD = "qwerty123";
+    static final SelenideElement AUTH_PAGE_TITLE = $("h2.heading ");  //  заголовок страницы
+    static final SelenideElement AUTH_LOGIN_INPUT = $("[name=login]");  //  поле ввода логина
+    static final SelenideElement AUTH_PASSWORD_INPUT = $("[name=password]");  //  поле ввода пароля
+    static final SelenideElement AUTH_CONTINUE_BUTTON = $("[data-test-id=action-login]");  //  кнопка "Продолжить"
 
     //  Страница вериикации смс
 
-    static final String valid_sms_notify = "12345";
-    static final SelenideElement sms_accept_input = $(".input__control");  //  поле ввода кода смс
-    static final SelenideElement sms_accept_button = $("[data-test-id='action-verify']");  //  кнопка пролжить
+    static final String VALID_SMS_NOTIFY = "12345";
+    static final SelenideElement SMS_ACCEPT_INPUT = $(".input__control");  //  поле ввода кода смс
+    static final SelenideElement SMS_ACCEPT_BUTTON = $("[data-test-id='action-verify']");  //  кнопка продолжить
 
     //  Стрваница со счетами карт
 
-    static final SelenideElement balance_dashboard = $("[data-test-id=dashboard]");  //  форма с балансами
-    static final SelenideElement balance_transfer_button_0001 = $("div > ul > li:nth-child(1) > div > button");  //  кнопка "пополнить" карту **** 0001
-    static final SelenideElement balance_transfer_button_0002 = $("div > ul > li:nth-child(2) > div > button");  //  кнопка "пополнить" карту **** 0002
+    static final SelenideElement BALANCE_DASHBOARD = $("[data-test-id=dashboard]");  //  форма с балансами
+    static final SelenideElement BALANCE_TRANSFER_BUTTON_0001 = $("div > ul > li:nth-child(1) > div > button");  //  кнопка "пополнить" карту **** 0001
+    static final SelenideElement BALANCE_TRANSFER_BUTTON_0002 = $("div > ul > li:nth-child(2) > div > button");  //  кнопка "пополнить" карту **** 0002
 
     //  Страница перевода денег с карты на карту
 
-    static final SelenideElement card_replenishment_title = $(byText("Пополнение карты"));  //  Заголовок страницы пополнения карты
-    static final SelenideElement card_replenishment_input_sum = $(".money-input .input__control");  //  Поле ввода суммы пополнения
-    static final SelenideElement card_replenishment_from = $("[type=tel]");  //  поле ввода номера карты ОТКУДА снимается
-    static final SelenideElement card_button_transfer = $("[data-test-id=\"action-transfer\"]");  //  кнопка "Пополнить"
+    static final SelenideElement CARD_REPLENISHMENT_TITLE = $(byText("Пополнение карты"));  //  Заголовок страницы пополнения карты
+    static final SelenideElement CARD_REPLENISHMENT_INPUT_SUM = $(".money-input .input__control");  //  Поле ввода суммы пополнения
+    static final SelenideElement CARD_REPLENISHMENT_FROM = $("[type=tel]");  //  поле ввода номера карты ОТКУДА снимается
+    static final SelenideElement CARD_BUTTON_TRANSFER = $("[data-test-id=\"action-transfer\"]");  //  кнопка "Пополнить"
 
-    static final String card_number_0001 = "5559 0000 0000 0001";  //  номер счета 0001
-    static final String card_number_0002 = "5559 0000 0000 0002";  //  номер счета 0002
+    static final String CARD_NUMBER_0001 = "5559 0000 0000 0001";  //  номер счета 0001
+    static final String CARD_NUMBER_0002 = "5559 0000 0000 0002";  //  номер счета 0002
 }

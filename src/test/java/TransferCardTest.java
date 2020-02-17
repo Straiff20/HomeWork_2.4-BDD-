@@ -2,16 +2,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Main {
+public class TransferCardTest {
 
     @Test
-    void TransactionToFirstCard_Int_Test() {
+    void TransactionToFirstCardIntTest() {
         int amountTransfer = 2000;
-        String cardNumberFrom = Constant.card_number_0002;
+        String cardNumberFrom = Constant.CARD_NUMBER_0002;
 
-        SMSVerificationPageObject smsVerificationPage = ValidLoginPageObject.ValidLogin();
+        SMSVerificationPageObject smsVerificationPage = ValidLoginPageObject.validLogin();
         AccountObjectPage beforeTransfer = smsVerificationPage.smsVerify();
-        TransferPageToCard transfer = beforeTransfer.ChooseCardForTransfer_1();
+        TransferPageToCard transfer = beforeTransfer.chooseCardForFirstTransfer();
         AccountObjectPage afterTransfer = transfer.moneyTransfer(String.valueOf(amountTransfer), cardNumberFrom);
 
         int sumFirstCardBeforeTransfer = Integer.parseInt(beforeTransfer.sumFirstCard);
@@ -26,13 +26,13 @@ public class Main {
     }
 
     @Test
-    void TransactionToSecondCard_Int_Test() {
+    void TransactionToSecondCardIntTest() {
         int amountTransfer = 1000;
-        String cardNumberFrom = Constant.card_number_0001;
+        String cardNumberFrom = Constant.CARD_NUMBER_0001;
 
-        SMSVerificationPageObject smsVerificationPageObject = ValidLoginPageObject.ValidLogin();
+        SMSVerificationPageObject smsVerificationPageObject = ValidLoginPageObject.validLogin();
         AccountObjectPage beforeTransfer = smsVerificationPageObject.smsVerify();
-        TransferPageToCard transfer = beforeTransfer.ChooseCardForTransfer_2();
+        TransferPageToCard transfer = beforeTransfer.chooseCardForSecondTransfer();
         AccountObjectPage afterTransfer = transfer.moneyTransfer(String.valueOf(amountTransfer), cardNumberFrom);
 
         int sumFirstCardBeforeTransfer = Integer.parseInt(beforeTransfer.sumFirstCard);
@@ -47,13 +47,13 @@ public class Main {
     }
 
     @Test
-    void TransactionToFirstCard_Double_Test() {
+    void TransactionToFirstCardDoubleTest() {
         double amountTransfer = 11.11;
-        String cardNumberFrom = Constant.card_number_0002;
+        String cardNumberFrom = Constant.CARD_NUMBER_0002;
 
-        SMSVerificationPageObject smsVerificationPageObject = ValidLoginPageObject.ValidLogin();
+        SMSVerificationPageObject smsVerificationPageObject = ValidLoginPageObject.validLogin();
         AccountObjectPage beforeTransfer = smsVerificationPageObject.smsVerify();
-        TransferPageToCard transfer = beforeTransfer.ChooseCardForTransfer_1();
+        TransferPageToCard transfer = beforeTransfer.chooseCardForFirstTransfer();
         AccountObjectPage afterTransfer = transfer.moneyTransfer(String.valueOf(amountTransfer), cardNumberFrom);
 
         double sumFirstCardBeforeTransfer = Double.parseDouble(beforeTransfer.sumFirstCard);
@@ -68,13 +68,13 @@ public class Main {
     }
 
     @Test
-    void TransactionToSecondCard_Double_Test() {
+    void TransactionToSecondCardDoubleTest() {
         double amountTransfer = 11.11;
-        String cardNumberFrom = Constant.card_number_0001;
+        String cardNumberFrom = Constant.CARD_NUMBER_0001;
 
-        SMSVerificationPageObject smsVerificationPageObject = ValidLoginPageObject.ValidLogin();
+        SMSVerificationPageObject smsVerificationPageObject = ValidLoginPageObject.validLogin();
         AccountObjectPage beforeTransfer = smsVerificationPageObject.smsVerify();
-        TransferPageToCard transfer = beforeTransfer.ChooseCardForTransfer_2();
+        TransferPageToCard transfer = beforeTransfer.chooseCardForSecondTransfer();
         AccountObjectPage afterTransfer = transfer.moneyTransfer(String.valueOf(amountTransfer), cardNumberFrom);
 
         double sumFirstCardBeforeTransfer = Double.parseDouble(beforeTransfer.sumFirstCard);

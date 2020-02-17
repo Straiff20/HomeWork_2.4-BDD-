@@ -7,7 +7,7 @@ public class AccountObjectPage {
     String sumSecondCard;
 
     public AccountObjectPage() {
-        Constant.balance_dashboard.waitUntil(Condition.visible, 15000);
+        Constant.BALANCE_DASHBOARD.waitUntil(Condition.visible, 15000);
         sumFirstCard = getSumCard0001();
         sumSecondCard = getSumCard0002();
     }
@@ -26,13 +26,13 @@ public class AccountObjectPage {
         return sum.substring(a, b);
     }
 
-    public TransferPageToCard ChooseCardForTransfer_1() {
-        Constant.balance_transfer_button_0001.click();
+    public TransferPageToCard chooseCardForFirstTransfer() {
+        Constant.BALANCE_TRANSFER_BUTTON_0001.click();
         return new TransferPageToCard();
     }
 
-    public TransferPageToCard ChooseCardForTransfer_2() {
-        Constant.balance_transfer_button_0002.click();
+    public TransferPageToCard chooseCardForSecondTransfer() {
+        Constant.BALANCE_TRANSFER_BUTTON_0002.click();
         return new TransferPageToCard();
     }
 }
